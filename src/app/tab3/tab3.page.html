@@ -1,9 +1,24 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tab Three
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>
+            Super Heroes
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+    <ion-card>
+        <ion-title>
+            <h1>Super Heroes</h1>
+        </ion-title>
+        <ul *ngFor="let heroe of superHeroes.members">
+            <span *ngIf="heroe.age > 30">
+  <li> {{ heroe.name}}
+      <ul><li>{{ heroe.powers }}</li>
+      <li>{{ heroe.age }}</li>
+      </ul>
+
+</span>
+        </ul>
+    </ion-card>
+</ion-content>
